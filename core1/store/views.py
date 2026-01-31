@@ -5,6 +5,8 @@ from .models import Category, Product
 # Create your views here.
 
 def categories(request):
+
+    print(11111111111111,Category.objects.all())
     return {
         'categories': Category.objects.all()
     }
