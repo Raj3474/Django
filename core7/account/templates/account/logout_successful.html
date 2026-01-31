@@ -1,0 +1,16 @@
+{% extends "account/sub_layout.html" %}
+
+{% block title %}Logout Successful.{% endblock %}
+
+
+{% block sub_content %}
+
+<div class="container p-0">
+    <div class="row">
+        <h2>Logged out</h2>
+        <p>Thanks for spending some quality time with the Web site today.</p>
+        <p><a class="text-decoration-none" href="{% url 'account:login' %}">Log in again</a></p>
+    </div>
+</div>
+
+{% endblock %}

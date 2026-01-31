@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Databases
+db.sqlite3
+*.log
+*.pot
+
+# Media and Static files (if managed locally)
+# Adjust these paths based on your project structure
+media/
+static/ 
+
+# Django-specific files
+local_settings.py
+
+# IDE-specific files (optional, can be added to a global gitignore)
+.idea/
+.vscode/
+*.swp
+.DS_Store # macOS system files
+
+# Secret keys and sensitive information (if kept in a separate file)
+# secrets.json 
+
+# Note: Django migration files (*.py) SHOULD NOT be ignored as they are part of the codebase

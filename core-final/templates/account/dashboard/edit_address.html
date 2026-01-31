@@ -1,0 +1,59 @@
+{% extends "account/sub_layout.html" %}
+
+{% block title %} Edit Address {% endblock %}
+
+
+{% block sub_content %}
+
+
+  <form name="address_form" class="account-form" method="post" enctype="multipart/form-data">
+
+    <h1 class="h3">Create/Edit Address</h1>
+  <div>Add a new delivery <b>address</b> and delivery preferences</div>
+  <hr />
+    {% if form.errors %}
+    <div class="alert alert-primary" role="alert">
+      Error: Please try again!
+    </div>
+    {% endif %}
+    {% csrf_token %}
+    <label class="small fw-bold">{{ form.full_name.label}}</label>
+    {{ form.full_name }}
+    <label class="small fw-bold">{{ form.phone.label}}</label>
+    {{ form.phone }}
+    <label class="small fw-bold">{{ form.address_line1.label}}</label>
+    {{ form.address_line1 }}
+    <label class="small fw-bold">{{ form.address_line2.label}}</label>
+    {{ form.address_line2 }}
+    <label class="small fw-bold">{{ form.pincode.label}}</label>
+    {{ form.pincode }}
+    <label class="small fw-bold">{{ form.landmark.label}}</label>
+    {{ form.landmark }}
+    <label class="small fw-bold">{{ form.city.label}}</label>
+    {{ form.city }}
+    <label class="small fw-bold">{{ form.state.label}}</label>
+    {{ form.state }}
+    <label class="small fw-bold">{{ form.country.label}}</label>
+    {{ form.country }}
+
+    <button class="btn btn-primary btn-block py-2 mb-4 mt-4 fw-bold w-100" type="button" value="Submit" onclick="submitForm()">
+
+    {% if is_edit_address %}
+      Submit Changes
+    {% else %}
+      Add Address
+    {% endif %}
+
+    </button>
+  </form>
+
+
+<script>
+function submitForm() {
+   var form = document.getElementsByName('address_form')[0];
+   form.submit(); // Submit the form
+   form.reset();  // Reset all form data
+   return false; // Prevent page refresh
+}
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block stylesheet %}
+    {% static 'payment/css/payment.css' %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="login d-flex align-items-center">
+        <div class="col-12 col-lg-5 col-md-7 col-sm-7 mx-auto">
+            {% block sub_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

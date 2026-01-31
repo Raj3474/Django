@@ -1,0 +1,18 @@
+{% extends "store/layout.html" %}
+
+{% load static %}
+
+{% block stylesheet %}
+    {% static 'account/css/account.css' %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="login d-flex align-items-center">
+        <div class="col-10 col-lg-6 col-md-7 col-sm-7 mx-auto">
+            {% block sub_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
